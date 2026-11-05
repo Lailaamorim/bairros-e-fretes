@@ -7,6 +7,16 @@ Este repositório é dedicado ao projeto **Bairros & Fretes**, uma aplicação w
 
 ---
 
+## 🚀 Acesse o Projeto
+
+<p align="center">
+  <a href="http://lailaamorim.github.io/bairros-e-fretes/">
+    <img src="https://img.shields.io/badge/🔗_Abrir_Projeto-111111?style=for-the-badge">
+  </a>
+</p>
+
+---
+
 ## 🎯 Objetivo
 
 Facilitar e agilizar o atendimento de vendas através de uma ferramenta simples de consulta, oferecendo recursos como:
