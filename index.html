@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101715">
+    <title>Bairros & Fretes | Casas Moreira</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="assets/logo.jpeg" alt="Logo Casas Moreira">
+            <div>
+                <span class="brand-name">CASAS MOREIRA</span>
+                <span class="brand-subtitle">CONSULTA DE ENTREGAS</span>
+            </div>
+        </div>
+        <span class="status"><span></span> Sistema de consulta</span>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <span class="eyebrow">CASAS MOREIRA · FRETES</span>
+            <h1>Bairros <span>&</span> Fretes</h1>
+            <p>Consulte rapidamente os valores de entrega por bairro ou cidade.</p>
+        </section>
+
+        <section class="search-panel">
+            <label for="search">Pesquisar localidade</label>
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Digite o nome do bairro ou cidade..."
+                    autocomplete="off"
+                >
+                <button type="button" id="clearSearch" aria-label="Limpar pesquisa">×</button>
+            </div>
+            <div class="search-info">
+                <span id="count">Carregando locais...</span>
+                <span>Busca por nome</span>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">RESULTADOS</span>
+                    <h2>Locais cadastrados</h2>
+                </div>
+                <button type="button" class="primary-button" id="toggleForm">
+                    <span>＋</span> Adicionar local
+                </button>
+            </div>
+
+            <div id="results" class="results"></div>
+        </section>
+
+        <section class="form-panel hidden" id="formPanel">
+            <div class="form-heading">
+                <div>
+                    <span class="eyebrow">GERENCIAMENTO</span>
+                    <h2 id="formTitle">Adicionar local</h2>
+                </div>
+                <button type="button" class="close-button" id="closeForm" aria-label="Fechar">×</button>
+            </div>
+
+            <form id="form">
+                <div class="field">
+                    <label for="district">Nome do bairro ou cidade</label>
+                    <input
+                        type="text"
+                        id="district"
+                        placeholder="Ex.: Duque de Caxias"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="price">Valor do frete (R$)</label>
+                    <input
+                        type="number"
+                        id="price"
+                        min="0"
+                        step="0.01"
+                        placeholder="Ex.: 90,00"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="status">Disponibilidade</label>
+                    <select id="status">
+                        <option value="disponivel">Faço entrega</option>
+                        <option value="indisponivel">Não faço</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" id="cancelBtn">Cancelar</button>
+                    <button type="submit" class="primary-button" id="saveBtn">Salvar local</button>
+                </div>
+
+                <p id="toast" class="toast" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <span>CASAS MOREIRA</span>
+        <span>Consulta interna de fretes</span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
